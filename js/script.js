@@ -9,6 +9,14 @@ const builds = [{
     arma: "Arco",
     rank: "Baixo",
     descricao: "Build simples para começar a jogar com Arco."
+},
+{
+    nome: "Build Endgame Dano Bruto",
+    arma: "Lâmina Dínamo",
+    rank: "Mestre",
+    armadura: "Conjunto focado em Affinity e Sharpness",
+    habilidades: ["Ataque Atribuído", "Olho Crítico", "Tampões de Ouvido"],
+    descricao: "Build ofensiva priorizando dano por fiola e ataques carregados (SAED)",
 }
 ];
 
