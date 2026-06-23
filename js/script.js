@@ -22,6 +22,7 @@ const builds = [{
 
 const listaBuilds = document.querySelector('#lista-builds');
 const campoBusca = document.querySelector('#busca');
+const botoesRank = document.querySelectorAll('.btn-rank');
 
 // Função que remove os acentos e deixa tudo el letras minúsculas
 function normalizarTexto(texto) {
@@ -65,3 +66,29 @@ campoBusca.addEventListener('input', function() {
     mostrarBuilds(buildsFiltradas);
 });
 
+// Ele ve com esse comando o que e digitado no campo de busca
+campoBusca.addEventListener('input', function() {
+    const textoDigitado = normalizarTexto(campoBusca.value);
+
+    const buildsFiltradas = builds.filter(function(build) {
+        const nomeArma = normalizarTexto(build.arma);
+        return nomeArma.startsWith(textoDigitado);
+    });
+
+    mostrarBuilds(buildsFiltradas);
+});
+
+botoesRank.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+        const rankEscolhido = botao.dataset.rank;
+
+        const buildsFiltradas = builds.filter(function(build) {
+            if (rankEscolhido === 'todos') {
+                return true;
+            }
+            return build.rank === rankEscolhido;
+        });
+
+        mostrarBuilds(buildsFiltradas);
+    });
+});
