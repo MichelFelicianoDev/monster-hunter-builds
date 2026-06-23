@@ -66,18 +66,6 @@ campoBusca.addEventListener('input', function() {
     mostrarBuilds(buildsFiltradas);
 });
 
-// Ele ve com esse comando o que e digitado no campo de busca
-campoBusca.addEventListener('input', function() {
-    const textoDigitado = normalizarTexto(campoBusca.value);
-
-    const buildsFiltradas = builds.filter(function(build) {
-        const nomeArma = normalizarTexto(build.arma);
-        return nomeArma.startsWith(textoDigitado);
-    });
-
-    mostrarBuilds(buildsFiltradas);
-});
-
 botoesRank.forEach(function(botao) {
     botao.addEventListener('click', function() {
         const rankEscolhido = botao.dataset.rank;
