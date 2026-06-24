@@ -36,6 +36,12 @@ function normalizarTexto(texto) {
 function mostrarBuilds(lista) {
     listaBuilds.innerHTML = ''; // limpa o que tava na tela
 
+    // Se a lista estiver sem nada digitado vai mostrar um aviso aqui!
+    if (lista.length === 0) {
+        listaBuilds.innerHTML = '<p class="sem-resultados">Nenhuma build encontrada.</p>';
+        return;
+    }
+
     lista.forEach(function(build) {
         const card = document.createElement('div');
         card.classList.add('card');
