@@ -1,0 +1,42 @@
+.hero-parallax {
+    /* Uma cor sólida no lugar da imagem para teste */
+    background-color: #1a1a1a;
+    background-image: url('../images/landing-bg.jpg');
+    background-size:cover;
+    background-position: center;
+
+    /* Essa é o codigo que eu crio o parallax*/
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-conteudo h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-conteudo p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.botao-cta {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #c0392b;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.botao-cta:hover {
+    background-color: #e74c3c;
+}
+
