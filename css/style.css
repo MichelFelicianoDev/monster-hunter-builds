@@ -31,3 +31,20 @@ body {
     transform: translateX(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
+
+.link-voltar {
+    display: inline-block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: color 0.2s ease;
+}
+
+.link-voltar:hover {
+    color: #fff;
+}
+
+.seta {
+    position: relative;
+    top: -3px;
+}
