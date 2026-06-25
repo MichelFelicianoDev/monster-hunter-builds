@@ -45,11 +45,12 @@ function mostrarBuilds(lista) {
     lista.forEach(function(build) {
         const card = document.createElement('div');
         card.classList.add('card');
+        card.classList.add('rank-' + normalizarTexto(build.rank));
 
         card.innerHTML = `
             <h2>${build.nome}</h2>
             <p><strong>Arma:</strong> ${build.arma}</p>
-            <p><strong>Rank:</strong> ${build.rank}</p>
+            <span class="badge-rank">${build.rank}</span>
             <p>${build.descricao}</p>
             `;
 
