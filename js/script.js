@@ -58,8 +58,21 @@ function mostrarBuilds(lista) {
     });
 }
 
-// Mostra todas as builds
-mostrarBuilds(builds);
+//... função mostrarBuilds termina aqui linha 59
+
+// Lê o parâmetro "arma" da URL
+const params = new URLSearchParams(window.location.search);
+const armaSelecionada = params.get("arma");
+
+if (armaSelecionada) {
+    const armaEncontrada = armas.find(arma => arma.slug === armaSelecionada);
+    const nomeDaArma = armaEncontrada.nome_pt;
+
+    const buildsFiltradas = builds.filter(build => build.arma === nomeDaArma);
+    mostrarBuilds(buildsFiltradas);
+} else {
+    mostrarBuilds(builds);
+}
 
 // É "visto" o que e digitado no campo de busca
 campoBusca.addEventListener('input', function() {
