@@ -10,7 +10,7 @@ function mostrarArmas() {
         const link = document.createElement("a");
         link.href = `builds.html?arma=${arma.slug}`;
         link.classList.add("card-arma");
-        link.textContent = `${arma.nome_pt} (${arma.nome_en})`;
+        link.innerHTML = `<img src="images/${arma.slug}.jpg">${arma.nome_pt} (${arma.nome_en})`;
         containerCorpoACorpo.appendChild(link);
     });
 
@@ -18,7 +18,7 @@ function mostrarArmas() {
         const link = document.createElement("a");
         link.href = `builds.html?arma=${arma.slug}`;
         link.classList.add("card-arma");
-        link.textContent = `${arma.nome_pt} (${arma.nome_en})`;
+        link.innerHTML = `<img src="images/${arma.slug}.jpg">${arma.nome_pt} (${arma.nome_en})`;
         containerDistancia.appendChild(link);
     });
 }
