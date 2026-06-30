@@ -100,7 +100,9 @@ body {
 
 /* Hall de Armas*/
 .card-arma {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     background-color: #1e1e1e;
     color: #fff;
     text-decoration: none;
@@ -109,6 +111,13 @@ body {
     border-radius: 6px;
     border-left: 4px silid #888;
     transition: all 0.2s ease;
+}
+
+.card-arma img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .card-arma:hover {
